@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Version Lock (no updates)",
+    "description": "Hides the Desktop update badge and the “Check for Updates…” entry and disables the update feed plus the mandatory-update policy. Switching the plugin off restores every file it touched."
+  }
+}

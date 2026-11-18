@@ -1,0 +1,11 @@
+# dsh-version-lock — locks the installed Desktop build while this row is enabled.
+# Disable the row (Settings → Plugins) and every touched file returns to its
+# original bytes; nothing else in the profile is modified.
+- insert:
+    - id: dsh-version-lock
+      name: dsh-version-lock
+      config:
+        patchFeed: true
+        hideMenu: true
+        disableMandatoryPolicy: true
+        debugLog: true

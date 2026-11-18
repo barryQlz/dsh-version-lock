@@ -1,0 +1,61 @@
+{
+  "name": "dsh-version-lock",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Pin the installed DeepSeek Harness Desktop build: hide the update entries and disable the update sources while enabled; disabling the plugin restores every file it touched.",
+  "license": "MIT",
+  "author": "barryQlz",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "desktop",
+    "no-update",
+    "version-lock",
+    "electron-updater"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barryQlz/dsh-version-lock.git"
+  },
+  "homepage": "https://github.com/barryQlz/dsh-version-lock#readme",
+  "bugs": {
+    "url": "https://github.com/barryQlz/dsh-version-lock/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "restore.mjs",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "install": {
+      "preferred": "tarball",
+      "tarball": "https://codeload.github.com/barryQlz/dsh-version-lock/tar.gz/refs/heads/main",
+      "zip": "https://codeload.github.com/barryQlz/dsh-version-lock/zip/refs/heads/main",
+      "git": "https://github.com/barryQlz/dsh-version-lock.git"
+    }
+  },
+  "dshTarget": "0.2.1-rc.2",
+  "engines": {
+    "node": ">=18"
+  }
+}
