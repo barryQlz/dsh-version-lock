@@ -199,7 +199,7 @@ window.__ModuleLoader__.load({
 
       const sweep = () => {
         try {
-          const nodes = document.querySelectorAll('button[aria-label], span[role=\"img\"][aria-label]')
+          const nodes = document.querySelectorAll('button[aria-label], span[role="img"][aria-label]')
           for (const node of nodes) {
             if (node.getAttribute(HIDDEN_ATTR) === 'hidden') continue
             if (matchesUpdateCopy(node.getAttribute('aria-label')) || matchesUpdateCopy(node.textContent)) {
@@ -244,7 +244,7 @@ window.__ModuleLoader__.load({
         if (timer !== 0) clearTimeout(timer)
         timer = 0
         try {
-          for (const node of document.querySelectorAll(`[${HIDDEN_ATTR}=\"hidden\"]`)) {
+          for (const node of document.querySelectorAll(`[${HIDDEN_ATTR}="hidden"]`)) {
             node.style.removeProperty('display')
             node.removeAttribute(HIDDEN_ATTR)
           }
